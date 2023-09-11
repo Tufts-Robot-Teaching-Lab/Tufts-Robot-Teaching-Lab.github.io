@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtlebot Starter Guide</title>
+    <style>
+        /* Add CSS styles for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        p {
+            color: #777;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turtlebot Starter Guide</h1>
+    
+    <h2>Connecting to the Turtlebot</h2>
+    <ol>
+        <li>Make sure that you’re logged onto the 'tufts_eecs' wifi network</li>
+        <p>The password is 'foundedin1883'</p>
+        
+        <li>Turn on the turtlebot (on/off switch is on the right of the base)</li>
+        <img src="https://lh6.googleusercontent.com/JEc3fQwaRsewgsZ68ouxqawiVNU8puICoDrSsUst99SrjbeHIM3VLsH2dPUX1ky5gSrMYY0s5JM75vb1VkQXmtl2n9NTJscSSswK7hd5PKFvwiiVSHt8g3kxgWhSS8glOCl3wCPZ5Kj88cS8awMT" alt="Turtlebot On/Off Switch">
+        
+        <li>On the turtlebot, type 'ifconfig' and make note of the ip address. It should look something like this:</li>
+        <img src="https://lh4.googleusercontent.com/1j0WVSit0brY_DRy8sLuPuSdSwQK174gkrqtdQCR0NTDtgUr5_X1hV2vBZ5iyzuSMxVZsonTemKo-NBvTKoMxoLafdTrrTvrK0oYWaOmA1NGuGGm6CWXDDBpgu4L97dlLDvCuQIyOpBR8w2ed0Rs" alt="Turtlebot IP Address">
+        
+        <li>In the terminal on your computer, type 'ssh turtlebot@<ip_address>'. It should look like this:</li>
+        <img src="https://lh6.googleusercontent.com/aTOYAj2O8wkjBwCiHTps-AQ3lg91JBwYvfM-7Fx0_OnCKIObbKMM98z7EQiJQempcQWvCmHH5sQ8XY4l1oiLq9TvwWi6BeOlOoHpNW6ZQc5yDnuUUazegOQvHnDXtWKWOHnOVGIHStqbQsqrKHAy" alt="SSH Command">
+        <p>You will have to enter the password for the turtlebot, which is 'turtlebot'.</p>
+    </ol>
+
+    <h2>Running Files on the Turtlebot</h2>
+    <ol>
+        <li>In the terminal you’ve ssh’d into on your computer, in a new tab type 'roslaunch turtlebot_bringup minimal.launch --screen'</li>
+        <img src="https://lh4.googleusercontent.com/5j_0aNDo4qeqY9RhptNpAe0bfzirPe7rVQ57WQA3nLFhi5805KRJVBTP-_gZTCMj-b_i_3gNpqbk56WPbP2lDPVplSSO9M6mvfJbZY2zF0jlppogdQdQz5xgJ8MMAY37udPIr2GuSUCp04ksSRGt4Q" alt="roslaunch Command">
+        
+        <li>To teleoperate the turtlebot with the keyboard, ssh into a new tab on your computer, then run 'roslaunch turtlebot_teleop keyboard_teleop.launch'</li>
+        <img src="https://lh6.googleusercontent.com/A9uOzfzetY5R-6vXLy9LLRkOHDs9Rl_Ux6tlHhQf6HqJ-IBAIOJpIggp2oAdBgUvuRiu0GizS5_BfliczG3awoS5H7GjQvf4dO3mXuuTq1l0XmNoa9YviOx7ov0vcl7AoStE8kRIrIE9zJ76jF5n" alt="Teleoperation Keys">
+        <p>Use the keys below to control the turtlebot:</p>
+        <img src="https://lh3.googleusercontent.com/boF20vUDfr4_IAw4fQKqtyKBOWAd7TxcDGKI1Dk8Mz2QGvh5QqdUH5TX5sriEy0IDQnrVhzidn7f3LBaoUu-k_SdpAIj-kpXKB7U73lcwMGxvCJUS3Yq4zwcWpvk5bJ-xjLwhlUv-Z8l0eX2cstN" alt="Teleoperation Keys Legend">
+        
+        <li>To copy files from your computer to the turtlebot, on your computer (NOT in the terminal you’ve ssh’d into) type 'scp -r <source> <target>'</li>
+        <p>An example of this is: 'scp -r example_folder/example_file.py turtlebot@<ip_address>'.</p>
+        <p>To specify further in your target you can add a colon (':'). An example of this is 'scp -r example_folder/example_file.py turtlebot@<ip_address>:specific_folder/'</p>
+        <p>Something to note: You don’t need to ssh into the turtlebot to run scp, but it’s usually useful if you have a terminal connected to the turtlebot so you can check if the files have correctly copied over.</p>
+    </ol>
+
+    <h2>Launching the Camera</h2>
+    <ol>
+        <li>On your computer, type 'roslaunch astra_camera astra.launch'</li>
+    </ol>
+
+    <h2>Debugging</h2>
+    <p>If you try to run a file on your computer (NOT in the terminal you’ve ssh’d into) and you run into an error like the following:</p>
+    <img src="https://lh6.googleusercontent.com/yxmV-GUAFV50xzKdC_LfXRy0NUdjfwPrmsh6dW7gq2hdE85L_OxViYVuZnSDiqRWc38EvNRq3
