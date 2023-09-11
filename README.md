@@ -1,6 +1,6 @@
 # Tufts-Robot-Teaching-Lab.github.io
 
-##### TurtleBot Docs
+### TurtleBot Docs
 
 ### Turtlebot Starter Guide
 
