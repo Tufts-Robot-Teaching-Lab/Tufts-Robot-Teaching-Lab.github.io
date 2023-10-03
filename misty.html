@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misty Starter Guide</title>
+</head>
+<body>
+    <h1>Misty Starter Guide</h1>
+    <hr>
+    
+    <h2>Connecting to the Misty</h2>
+    <p>First things first, you'll want to turn the Misty on!</p>
+    <img src="https://lh6.googleusercontent.com/mbRNtHa4L6vDi5cdYUGeltBawvv_94_ZXBiHIxlSnY2JeHn87eFOgaVXJH3qNLB_6Ia3WlJTuAoU7ptEK9MBrPv9j7WJO8aGpnYS26MA_kJdq3NTJ8mlAW6kvYzxc0LxBrRu7VQVkEmKQ2kkO6-Qpg" alt="Misty On/Off Switch">
+    <p>The power switch is at the bottom of the robot to the back.</p>
+    <p>You can tell the robot is on because you will see lights turn on (and most likely hear a whirring noise). If nothing happens when turning it on, try charging it.</p>
+    <p>You can see the full usage guide of a Misty robot <a href="https://docs.mistyrobotics.com/misty-ii/robot/misty-ii/">here</a>.</p>
+
+    <h3>Connecting to a Misty without the Android App</h3>
+    <p>I personally struggled using the app (I have an Android, but it kept crashing!) HOWEVER, the app is incredibly useful in that it gives you the Misty's IP Address– something vital no matter your method of programming the Misty.</p>
+    
+    <ol>
+        <li>First, you'll want to format the USB drive as "FAT".
+            <ol type="a">
+                <li>I used this guide to do so on Linux: <a href="https://www.tutorialspoint.com/how-to-format-usb-drives-in-linux">Linux USB Formatting Guide</a></li>
+                <li>On Linux, I essentially plugged the USB in, right-clicked it, and then pressed "Format", making sure to check the "FAT" option.</li>
+                <li>To do this on other operating systems see these guides:
+                    <ol>
+                        <li>Mac: <a href="https://support.nadelectronics.com/hc/en-us/articles/360000158588-How-to-Format-a-USB-flash-drive-on-a-Mac-to-MS-DOS-FAT-">Mac USB Formatting Guide</a></li>
+                        <li>Windows: <a href="https://www.howtogeek.com/902632/format-usb-flash-drive-to-fat32-windows/">Windows USB Formatting Guide</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>After formatting your USB drive, in the root of that drive (aka the base folder of the flash drive), create a folder/directory called 'misty' (NOTE: do not add the quotes)</li>
+        <li>Inside the 'misty' folder/directory create a .txt file called 'wifi.txt'.</li>
+        <li>Open that file. Set the first line to 'tufts_eecs' and the second line to 'foundedin1883'.</li>
+        <li>Save the file with this information within it. Eject the USB.</li>
+        <li>Plug the USB into the Misty! The USB port is a little hidden on Misty's back.</li>
+        <li>Give the Misty some time to process that information–the documentation says at least 60 seconds.</li>
+        <li>Then, remove the USB drive from the Misty. Plug it back into your computer. It should now have a file within the 'misty' folder that says 'onboard.txt', this file will have the Misty's IP address.</li>
+    </ol>
+    <p>Now that you have the Misty's IP address you can use various methods to program the Misty! You can see the various methods of programming the Misty at: <a href="https://docs.mistyrobotics.com/misty-ii/robot/misty-ii/">Misty II Programming Methods</a>.</p>
+</body>
+</html>
