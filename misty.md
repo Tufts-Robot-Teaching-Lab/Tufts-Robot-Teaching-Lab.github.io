@@ -51,3 +51,7 @@ Connecting to the Misty without an Android App requires the use of a USB (aka US
 8. Then, remove the usb drive from the Misty. Plug it back into your computer. It should now have a file within the ‘misty’ folder that says ‘onboard.txt’, this file will have the Misty’s ip address. 
 
 Now that you have the Misty’s ip address you can use various methods to program the Misty! You can see the various methods of programming the misty at: <https://docs.mistyrobotics.com/misty-ii/robot/misty-ii/>
+
+#### Misty with Python
+
+It's up to you how you want to program the Misty. There are multiple methods you can find here: <https://docs.mistyrobotics.com/misty-ii/robot/misty-ii/>. There seems to be an issue with getting the Misty to speak. If you do want to get the Misty to speak, there's a workaround on our github <https://github.com/Tufts-Robot-Teaching-Lab/MistyPySpeechWorkaround>.
