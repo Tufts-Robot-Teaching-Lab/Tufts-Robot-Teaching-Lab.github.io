@@ -31,7 +31,6 @@
             padding: 1rem 2rem;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             display: flex;
-            /* Changed to flex-start since nav links are gone, keeps logo on left */
             justify-content: space-between; 
             align-items: center;
             position: sticky;
@@ -47,9 +46,9 @@
         /* --- HERO SECTION (The Big Picture Area) --- */
         .hero {
             position: relative;
-            /* Placeholder Color - Replace url('') with your image later */
             background-color: #666; 
-            background-image: url(''); 
+            /* UPDATED: Added a robotics themed background image */
+            background-image: url('bg.jpg'); 
             background-size: cover;
             background-position: center;
             height: 80vh; /* 80% of screen height */
@@ -60,12 +59,12 @@
             color: var(--white);
         }
 
-        /* Overlay to make text readable if you add a bright image later */
+        /* Overlay to make text readable */
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.4); 
+            background: rgba(0, 0, 0, 0.5); /* Slightly darkened for better text contrast */
         }
 
         .hero-content {
@@ -80,12 +79,14 @@
             font-weight: 700;
             margin-bottom: 0.5rem;
             line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p.subtitle {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         /* --- CUSTOM LINK BUTTONS --- */
@@ -243,9 +244,9 @@
                 <p>Students engage in hands-on projects ranging from navigation and mapping to complex social interactions, preparing them for future research and industry roles in robotics.</p>
             </div>
             <div>
-                <div style="background-color: #eee; height: 300px; display: flex; align-items: center; justify-content: center; color: #999;">
-                    [Lab Activity Image Placeholder]
-                </div>
+                <img src="students-in-the-lab.jpg" 
+                     alt="Students and robots in the lab" 
+                     style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             </div>
         </div>
     </section>
@@ -273,15 +274,6 @@
             <p><strong>Email:</strong> <a href="mailto:hyu08@tufts.edu">hyu08@tufts.edu</a></p>
         </div>
     </section>
-
-    <!-- <footer>
-        <p>&copy; 2025 Tufts University. All Rights Reserved.</p>
-        <p>
-            <a href="https://www.tufts.edu/accessibility">Accessibility</a> | 
-            <a href="https://www.tufts.edu/privacy">Privacy</a> | 
-            <a href="https://www.tufts.edu/">Tufts.edu</a>
-        </p>
-    </footer> -->
 
 </body>
 </html>
